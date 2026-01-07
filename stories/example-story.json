@@ -1,0 +1,64 @@
+{
+  "storyId": "shepherd-lamb-01",
+  "title": "O Pastor e o Cordeiro",
+  "description": "Uma história inspirada em passagens bíblicas, adaptada para formato interativo.",
+  "initialNodeId": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "title": "O Campo ao Anoitecer",
+      "bibleReference": "Exemplo 1:1-3",
+      "text": "O céu estava escuro. Um cordeiro branco aparecia no centro de um campo enquanto a neblina começava a clarear...",
+      "assets": {},
+      "choices": [
+        { "id": "c1", "label": "Seguir o cordeiro", "nextNodeId": "n2", "faithful": true },
+        { "id": "c2", "label": "Voltar para casa", "nextNodeId": "n3_alt", "faithful": false }
+      ],
+      "isEnding": false
+    },
+    {
+      "id": "n2",
+      "title": "Entrada na Jornada",
+      "bibleReference": "Exemplo 1:4",
+      "text": "Você atravessa um vale onde encontra pessoas que necessitam de ajuda — lembrando uma lição sobre cuidado e fé.",
+      "assets": {},
+      "choices": [
+        { "id": "c2a", "label": "Ajudar quem precisa", "nextNodeId": "n4", "faithful": true },
+        { "id": "c2b", "label": "Seguir seu próprio caminho", "nextNodeId": "n4_alt", "faithful": false },
+        { "id": "c2c", "label": "Ficar observando", "nextNodeId": "n5", "faithful": true }
+      ],
+      "isEnding": false
+    },
+    {
+      "id": "n3_alt",
+      "title": "Desfecho Alternativo",
+      "text": "Você volta pra casa e conta uma versão transformada — a história vira uma fábula com ensinamento moral, mas não é mais a narrativa original.",
+      "isEnding": true,
+      "endingType": "fictional"
+    },
+    {
+      "id": "n4",
+      "title": "A Rocha da Fé",
+      "text": "Ao ajudar, você encontra uma comunidade que reforça a mensagem original e verifica a passagem bíblica referente.",
+      "choices": [],
+      "isEnding": true,
+      "endingType": "canonical"
+    },
+    {
+      "id": "n4_alt",
+      "title": "Caminho Próprio",
+      "text": "Ao seguir seu próprio caminho, a narrativa se distancia. Você aprende algo novo, mas a história já não é mais a mesma passagem bíblica.",
+      "choices": [],
+      "isEnding": true,
+      "endingType": "fictional"
+    },
+    {
+      "id": "n5",
+      "title": "Observador",
+      "text": "Ao observar, você descobre simbolismos e reflexões que te aproximam do texto original, e compartilha uma reflexão final.",
+      "choices": [],
+      "isEnding": true,
+      "endingType": "canonical"
+    }
+  ]
+}
