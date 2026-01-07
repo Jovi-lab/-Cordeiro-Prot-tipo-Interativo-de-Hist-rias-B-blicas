@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cordeiro — Protótipo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Intro overlay -->
+    <div id="intro" class="overlay">
+      <div class="intro-content">
+        <div class="scene">
+          <!-- Lamb SVG animated via CSS -->
+          <svg id="lamb" viewBox="0 0 200 140" width="300" height="210" aria-hidden="true">
+            <defs>
+              <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="2" />
+              </filter>
+            </defs>
+            <rect x="0" y="0" width="200" height="140" fill="#0b0b0f" />
+            <g transform="translate(40,20)" fill="#fff" filter="url(#soft)" opacity="0.98">
+              <ellipse cx="60" cy="60" rx="40" ry="28" fill="#fff"/>
+              <circle cx="35" cy="40" r="14" fill="#fff"/>
+              <circle cx="85" cy="40" r="14" fill="#fff"/>
+              <circle cx="48" cy="66" r="4" fill="#333"/>
+              <circle cx="72" cy="66" r="4" fill="#333"/>
+              <ellipse cx="60" cy="95" rx="24" ry="8" fill="#eee"/>
+            </g>
+          </svg>
+        </div>
+        <h1 class="intro-title">Cordeiro</h1>
+        <p class="intro-sub">Entre em histórias da Bíblia — viva, escolha e aprenda.</p>
+
+        <div id="nameForm" class="name-form">
+          <label for="playerName">Como quer ser chamado?</label>
+          <input id="playerName" type="text" placeholder="Seu nome" />
+          <button id="startBtn">Começar</button>
+        </div>
+      </div>
+      <button id="skipIntro" class="skip">Pular intro</button>
+    </div>
+
+    <!-- Catalog -->
+    <main id="main" class="hidden">
+      <header>
+        <h2>Olá, <span id="displayName"></span></h2>
+        <p>Escolha uma história para entrar de cabeça</p>
+      </header>
+
+      <section id="catalog" class="catalog"></section>
+
+      <section id="storyView" class="hidden story-view">
+        <button id="backToCatalog" class="back">← Voltar ao catálogo</button>
+        <article id="nodeCard" class="node-card"></article>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
