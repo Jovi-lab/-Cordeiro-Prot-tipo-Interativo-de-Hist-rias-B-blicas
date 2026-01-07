@@ -1,0 +1,42 @@
+:root{
+  --bg:#0b0b0f;
+  --card:#111216;
+  --accent:#e8d7c8;
+  --muted:#9a9aa3;
+}
+*{box-sizing:border-box}
+html,body,#app{height:100%;margin:0;font-family:Inter,system-ui,Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#07070a 0%, #0f1724 100%);color:var(--accent)}
+.overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;padding:24px;transition:opacity .6s}
+.hidden{display:none}
+.intro-content{max-width:860px;text-align:center}
+.scene{width:320px;height:240px;margin:0 auto;filter:drop-shadow(0 8px 16px rgba(0,0,0,.6))}
+#lamb{transform-origin:center; animation:fadeIn 2.2s ease forwards, bob 3s ease-in-out infinite;}
+@keyframes fadeIn{0%{opacity:0;filter:grayscale(1) blur(6px)}100%{opacity:1;filter:grayscale(0) blur(0)}}
+@keyframes bob{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+
+.intro-title{font-size:36px;margin:8px 0 0;color:var(--accent)}
+.intro-sub{color:var(--muted);margin:6px 0 18px}
+
+.name-form{display:flex;gap:8px;justify-content:center;align-items:center}
+.name-form input{padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.06);background:#0b0b0f;color:var(--accent);min-width:200px}
+.name-form button{padding:10px 14px;border-radius:8px;background:#2b6b4f;border:0;color:white;cursor:pointer}
+
+.skip{position:absolute;right:12px;top:12px;background:transparent;border:1px solid rgba(255,255,255,.06);color:var(--muted);padding:8px 10px;border-radius:6px;cursor:pointer}
+
+main{padding:28px;max-width:1100px;margin:0 auto}
+header h2{margin:0;font-size:22px}
+.catalog{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.03)}
+.card h3{margin:6px 0 4px}
+.card p{margin:0;color:var(--muted);font-size:13px}
+.card button{margin-top:8px;padding:10px 12px;border-radius:10px;border:0;background:#3b82f6;color:white;cursor:pointer}
+
+.story-view{margin-top:18px}
+.back{background:transparent;border:0;color:var(--muted);cursor:pointer;margin-bottom:10px}
+.node-card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,.03);min-height:200px}
+.node-card h3{margin:0 0 8px}
+.choices{margin-top:14px;display:flex;flex-direction:column;gap:8px}
+.choice-btn{padding:10px 12px;border-radius:10px;border:0;background:#6b7280;color:white;cursor:pointer;text-align:left}
+.choice-faithful{background:#16a34a}
+.choice-nonfaithful{background:#ef4444}
+.ending-note{margin-top:12px;color:var(--muted);font-size:14px}
